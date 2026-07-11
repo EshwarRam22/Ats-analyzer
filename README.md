@@ -2,26 +2,26 @@
 
 Ever spent hours polishing your resume only to wonder if it's actually going to make it past the automated filters? Yeah, we've been there too. That's why we built this.
 
-This tool takes your resume and a job description, runs them both through Google's Gemini AI, and gives you an honest, evidence-based breakdown of how well you match — no fluff, no vague encouragement.
+This tool takes your resume and a job description, runs them both through Google's Gemini AI, and gives you an honest, evidence-based breakdown of how well you match -- no fluff, no vague encouragement.
 
 ---
 
 ## What it actually does
 
-- **Scores your resume** against a job description (0–100), with a clear explanation of *why* you got that score
-- **Finds missing skills** — the ones the JD wants that your resume doesn't show
-- **Highlights matching skills** — with direct quotes from your resume as proof
+- **Scores your resume** against a job description (0-100), with a clear explanation of *why* you got that score
+- **Finds missing skills** -- the ones the JD wants that your resume doesn't show
+- **Highlights matching skills** -- with direct quotes from your resume as proof
 - **Calls out weaknesses** honestly, without softening the blow
-- **Gives you actionable suggestions** — specific edits, not generic advice like "make your resume better"
+- **Gives you actionable suggestions** -- specific edits, not generic advice like "make your resume better"
 
 ---
 
 ## Built with
 
-- **Flask** — lightweight Python web server
-- **Google Gemini 3.5 Flash** — the AI brain doing the heavy lifting
-- **PyPDF2** — for pulling text out of your PDF resume
-- **Vanilla HTML/CSS/JS** — clean, fast, no framework overhead
+- **Flask** -- lightweight Python web server
+- **Google Gemini 3.5 Flash** -- the AI brain doing the heavy lifting
+- **PyPDF2** -- for pulling text out of your PDF resume
+- **Vanilla HTML/CSS/JS** -- clean, fast, no framework overhead
 
 ---
 
@@ -57,20 +57,21 @@ Then open your browser and go to `http://127.0.0.1:8000`. Drop in your resume PD
 
 - Only PDF resumes are supported (text-based, not scanned images)
 - Maximum file size is 5 MB
-- The job description needs to be at least 50 characters — if it's too vague, the tool will tell you rather than give you a made-up score
-- Analysis usually takes 10–20 seconds depending on Gemini's response time
+- The job description needs to be at least 50 characters -- if it's too vague, the tool will tell you rather than give you a made-up score
+- Analysis usually takes 10-20 seconds depending on Gemini's response time
 
 ---
 
 ## Project structure
 
 ```
-├── main.py              # Flask app and all the backend logic
-├── templates/
-│   └── index.html       # The entire frontend (single page)
-├── requirements.txt     # Python dependencies
-├── uploads/             # Temp storage for uploaded PDFs (gitignored)
-└── .env                 # Your API key (never committed)
+ats-resume-analyzer/
+|-- main.py              # Flask app and all the backend logic
+|-- templates/
+|   |-- index.html       # The entire frontend (single page)
+|-- requirements.txt     # Python dependencies
+|-- uploads/             # Temp storage for uploaded PDFs (gitignored)
+|-- .env                 # Your API key (never committed)
 ```
 
 ---
@@ -83,4 +84,4 @@ The AI is instructed to be strict. It won't give you a 90 because your resume *p
 
 ## License
 
-MIT — use it, fork it, do whatever you want with it.
+MIT -- use it, fork it, do whatever you want with it.
